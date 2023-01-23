@@ -1,2 +1,2 @@
 # WebApplikation
-# Meine erste web-Applikation
+# Meine erste Website. Ich lerne mit ihr verschiedene Sachen.
