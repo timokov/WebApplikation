@@ -8,17 +8,70 @@
     </head>
     <body>
        <header>
-        
         <nav>
             <ul>
-                <li><img src="icon.png"></li> <!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                <li><img src="logo.png"></li> <!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                 <li><a href="FragenundAntworten.html">Fragen & Antworten</a></li>
                 <li><a href="News.html">News zu den Krisengebieten</a></li>
                 <li><a href="Ueberuns.html">Über die Organisation</a></li>
             </ul>
         </nav>
        </header>
-       <main></main>
+       <main>
+        <section>
+            <table><!--  s.15 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                <thead>
+                    <tr><th><h4>Adressdaten:</h4></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Bitte geben Sie Ihre Adresse an:
+                        <form>
+                            <input type="text" name="Adresse" size="30" maxlength="100">
+                        </form></td>
+                    </tr>
+                    <tr><td>Bitte geben Sie Ihre Postleitzahl/Ort an:
+                            <form>
+                                <input type="text" name="PLZ" size="5" minlength="5" maxlength="5">
+                                <input type="text" name="Ort" size="25" maxlength="100">
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <p>Wählen Sie das gewünschte Gebiet bzw. die gewünschten Gebiete:
+                <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                    <ul>
+                        <li><input type="checkbox" name="Bhutan" value="g1"> Bhutan</li>
+                        <li><input type="checkbox" name="Kongo" value="g2"> Demokratische Republik Kongo</li>
+                        <li><input type="checkbox" name="Gambia" value="g3"> Gambia</li>
+                        <li><input type="checkbox" name="Niger" value="g4"> Niger</li>
+                        <li><input type="checkbox" name="Togo" value="g5"> Togo</li>
+                        <!--Liste aus: https://unric.org/de/wp-content/uploads/sites/4/2017/02/dpi2190b.pdf -->
+                    </ul>
+                </form>
+            </p>
+        </section>
+        <section>
+            <p>Wählen Sie die Art der gespendeten Kleidung:
+                <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                    <ul>
+                        <li><input type="checkbox" name="Taschen" value="k1"> Taschen, Rucksäcke</li>
+                        <li><input type="checkbox" name="Kopfbedeckungen" value="k2"> Kopfbedeckungen</li>
+                        <li><input type="checkbox" name="Pullover" value="k3"> Pullover/Sweatshirts</li>
+                        <li><input type="checkbox" name="T-Shirts" value="k4"> T-Shirts</li>
+                        <li><input type="checkbox" name="Hosen" value="k5"> Hosen</li>
+                        <li><input type="checkbox" name="Schuhe" value="k6"> Schuhe</li>
+                        <!--Liste aus: https://unric.org/de/wp-content/uploads/sites/4/2017/02/dpi2190b.pdf -->
+                    </ul>
+                </form>
+            </p>
+        </section>
+        <section>
+            <input type="submit" name="fertig" value="Spenden">
+        </section>
+       </main>
        <footer>
         <nav>
             <ul>
