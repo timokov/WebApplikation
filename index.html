@@ -11,44 +11,51 @@
     </head>
     <body>
        <header>
-        <nav>
-            <ul><!--  s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
-                <li><img src="logo.png"></li> <!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
-                <li><a href="FragenundAntworten.html">Fragen & Antworten</a></li>
-                <li><a href="News.html">News zu den Krisengebieten</a></li>
-                <li><a href="Ueberuns.html">Über die Organisation</a></li>
-            </ul>
-        </nav>
+        <div class="container-fluid text-center"><img src="logo.png"></div><!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+        <div class="container-fluid text-center">
+
+            <nav>
+                <div class="row">
+                    <div class="col-4"><a href="FragenundAntworten.html">Fragen & Antworten</a></div>
+                    <div class="col-4"><a href="News.html">News zu den Krisengebieten</a></div>
+                    <div class="col-4"><a href="Ueberuns.html">Über die Organisation</a></div>
+                </div>
+            </nav>
+        </div>
        </header>
        <main>
-        <section>
-            <p><h1>Neu: Sie können Ihre Kleiderspende nun registrieren!</h1></p><!--  Für <p>:s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
-            <p>Bitte wählen Sie dazu aus, ob Sie die gespendeten Altkleider an unserer Geschäftsstelle abgeben,
-                oder diese von unserem Sammelfahrzeug bequem abholen lassen möchten.</p>
-            <p><h2>Ihre Vorteile auf einen Blick:</h2></p>
-            <p><ul>
-                <li>Flexible Wahl zwischen Abholung oder Übergabe.</li>
-                <li>Flexible Wahl des Krisengebietes, an die Sie die Kleider spenden möchten.</li>
-                <li>Pratische Angabe der Kleidungsstücke, die Sie spenden möchten. So wird ein reibungsloser Ablauf garantiert.</li>
-            </ul></p>
-        </section>
-        
-        <section>
-            <p><h3>Bitte wählen Sie die gewünschte Option:</h3></p>
-            <form name="Auswahl" method="get"> 
-                <p><input type="radio" id="abg" name="Auswahl" value="Abgabe"><label for="abg"> Übergabe an der Geschäftsstelle</label></p>
-                <p><input type="radio" id="abh" name="Auswahl" value="Abholung"><label for="abh"> Abholung</label></p><!--https://wiki.selfhtml.org/wiki/HTML/Tutorials/Formulare/Radio-Buttons_und_Checkboxen#Radio-Buttons-->
-                <p><input type="submit" name="okbutton" value="Ok"></p>
-            </form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
-        </section>
-       </main>
+            <div class="container-md"><!--https://getbootstrap.com/docs/5.3/layout/containers/-->
+                <section>
+                    <p><h1>Neu: Sie können Ihre Kleiderspende nun registrieren!</h1></p><!--  Für <p>:s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                    <p>Bitte wählen Sie dazu aus, ob Sie die gespendeten Altkleider an unserer Geschäftsstelle abgeben,
+                        oder diese von unserem Sammelfahrzeug bequem abholen lassen möchten.</p>
+                    <p><h2>Ihre Vorteile auf einen Blick:</h2></p>
+                    <p><ul><!--  s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                        <li>Flexible Wahl zwischen Abholung oder Übergabe.</li>
+                        <li>Flexible Wahl des Krisengebietes, an die Sie die Kleider spenden möchten.</li>
+                        <li>Pratische Angabe der Kleidungsstücke, die Sie spenden möchten. So wird ein reibungsloser Ablauf garantiert.</li>
+                    </ul></p>
+                </section>
+                
+                <section>
+                    <p><h3>Bitte wählen Sie die gewünschte Option:</h3></p>
+                    <form name="Auswahl" method="get"> 
+                        <p><input type="radio" id="abg" name="Auswahl" value="Abgabe"><label for="abg"> Übergabe an der Geschäftsstelle</label></p>
+                        <p><input type="radio" id="abh" name="Auswahl" value="Abholung"><label for="abh"> Abholung</label></p><!--https://wiki.selfhtml.org/wiki/HTML/Tutorials/Formulare/Radio-Buttons_und_Checkboxen#Radio-Buttons-->
+                        <p><input type="submit" name="okbutton" value="Ok"></p>
+                    </form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                </section>
+            </div>
+        </main>
        <footer>
-        <nav>
-            <ul>
-                <li><a href="Datenschutz.html">Datenschutz</a></li>
-                <li><a href="Impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
+        <div class="container-fluid text-center">
+            <nav>
+                <div class="row">
+                    <div class="col-12"><a href="Datenschutz.html">Datenschutz</a></div>
+                    <div class="col-12"><a href="Impressum.html">Impressum</a></div>
+                </div>
+            </nav>
+        </div>
        </footer>
     </body>
 </html>
