@@ -19,20 +19,31 @@
        </header>
        <main>
         <section>
+            <form>
+                <p><label for="datumhol"><h4>Datum der Abholung:</label></h4><br>
+                    <input type="date" id="datumhol" name="datum" required><!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date-->
+                </p>
+                <p><label for="zeithol"><h4>Uhrzeit der Abholung (zwischen 9 Uhr und 18 Uhr):</h4><br>
+                    Bitte beachten Sie, dass das nur ein Richtwert ist.</label><br>
+                    <input type="time" name="uhrzeit" id="zeithol" min="09:00" max="18:00" required><!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time-->
+                </p>
+            </form>
+        </section>
+        <section>
             <table><!--  s.15 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                 <thead>
                     <tr><th><h4>Adressdaten:</h4></th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Bitte geben Sie Ihre Adresse an:
+                    <tr><td>Straße und Hausnummer:
                         <form>
-                            <input type="text" name="Adresse" size="30" maxlength="100">
+                            <input type="text" name="Adresse" size="30" maxlength="100" placeholder="Straße Nr.">
                         </form></td>
                     </tr>
-                    <tr><td>Bitte geben Sie Ihre Postleitzahl/Ort an:
+                    <tr><td>Postleitzahl und Ort:
                             <form>
-                                <input type="text" name="PLZ" size="5" minlength="5" maxlength="5">
-                                <input type="text" name="Ort" size="25" maxlength="100">
+                                <input type="text" name="PLZ" size="5" pattern="[0-9] {5}" placeholder="PLZ"><!--  s.33 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. -->
+                                <input type="text" name="Ort" size="25" maxlength="100" placeholder="Ort">
                             </form>
                         </td>
                     </tr>
@@ -40,7 +51,7 @@
             </table>
         </section>
         <section>
-            <p>Wählen Sie das gewünschte Gebiet bzw. die gewünschten Gebiete:
+            <p><h4>Wählen Sie das gewünschte Gebiet bzw. die gewünschten Gebiete:</h4>
                 <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                     <ul>
                         <li><input type="checkbox" name="Bhutan" value="g1"> Bhutan</li>
@@ -54,7 +65,7 @@
             </p>
         </section>
         <section>
-            <p>Wählen Sie die Art der gespendeten Kleidung:
+            <p><h4>Wählen Sie die Art der gespendeten Kleidung:</h4>
                 <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                     <ul>
                         <li><input type="checkbox" name="Taschen" value="k1"> Taschen, Rucksäcke</li>

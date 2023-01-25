@@ -19,7 +19,17 @@
        </header>
        <main>
         <section>
-            <p>Wählen Sie das gewünschte Gebiet oder die gewünschten Gebiete:
+            <form>
+                <p><label for="datum"><h4>Datum der Abgabe:</h4></label><br><!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date-->
+                    <input type="date" id="datum" name="datum" required>
+                </p>
+                <p><label for="zeit"><h4>Uhrzeit der Abgabe:</label></h4><br>
+                    <input type="time" id="zeit" name="uhrzeit" required><!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time-->
+                </p>
+            </form>
+        </section>
+        <section>
+            <p><h4>Wählen Sie das gewünschte Gebiet oder die gewünschten Gebiete:</h4>
                 <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                     <ul>
                         <li><input type="checkbox" name="Bhutan" value="g1"> Bhutan</li>
@@ -33,7 +43,7 @@
             </p>
         </section>
         <section>
-            <p>Wählen Sie die Art der gespendeten Kleidung:
+            <p><h4>Wählen Sie die Art der gespendeten Kleidung:</h4>
                 <form><!--  s.29ff Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                     <ul>
                         <li><input type="checkbox" name="Taschen" value="k1"> Taschen, Rucksäcke</li>
