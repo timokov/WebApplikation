@@ -61,14 +61,14 @@
                         <section>
                             <p><h3>Bitte wählen Sie die gewünschte Option:</h3></p>
                             <p><div class="form-check"><!--https://getbootstrap.com/docs/5.3/forms/checks-radios/-->
-                                <input class="form-check-input" type="radio" name="Auswahl" id="abgabe" value="option1">
+                                <input class="form-check-input" type="radio" name="Auswahl" id="abgabe" value="option1" checked>
                                 <label class="form-check-label" for="abgabe">Übergabe an der Geschäftsstelle</label>
                             </div></p>
                             <p><div class="form-check">
                                 <input class="form-check-input" type="radio" name="Auswahl" id="abholung" value="option2">
                                 <label class="form-check-label" for="abholung">Abholung</label> 
                             </div></p>
-                            <p><button type="button" class="btn btn-secondary btn-lg">Weiter</button></p>
+                            <p><button type="button" class="btn btn-secondary btn-lg" onclick="weiter()">Weiter</button></p><!--https://getbootstrap.com/docs/5.3/components/buttons/-->
                         </section>
                     </div>
                 </div>
@@ -85,4 +85,5 @@
             </div>
        </footer>
     </body>
+    <script src="script.js"></script>
 </html>

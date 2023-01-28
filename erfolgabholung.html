@@ -40,12 +40,12 @@
                         <section>
                             <p><h1><b>Danke!</b><br>Sie haben Ihre Spende erfolgreich registriert!</h1></p>
                             <p><b>Ihre Registrierung im Überblick:</b></p>
-                            <p>Gewählte Methode: Abholung (Adresse: ...)</p>
+                            <p>Gewählte Methode: Abholung (Adresse: <b id="anzeigeanschrift"></b>, <b id="anzeigeplz"></b> <b id="anzeigeort"></b>)</p>
                             <p>Am ... um ... spenden Sie ..., ihr Zielgebiet ist ... </p>
                         </section>
                     <div class="col-12 pt-5">
                         <section>
-                            <button type="button" class="btn btn-secondary btn-lg">Zurück zum Start</button>
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="back()">Zurück zum Start</button>
                         </section>
                     </div>
                 </div>
@@ -61,5 +61,6 @@
                 </nav>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

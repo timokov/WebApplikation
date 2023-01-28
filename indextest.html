@@ -10,44 +10,76 @@
 
     </head>
     <body>
-        <header class="bg-secondary border-bottom border-light text-light"><!--https://getbootstrap.com/docs/5.3/utilities/-->
-            <div class="container-fluid text-center"><div class="row justify-content-center"><div class="col-xs-12 col-md-6 p-4"><img src="logo.png"></div></div></div><!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
-            <div class="container-fluid text-center"><!--https://getbootstrap.com/docs/5.3/layout/containers/-->
-               <div class="row">
-                    <div class="col">
-                        <ul class="nav nav-tabs border border-0"><!--https://getbootstrap.com/docs/5.3/components/navs-tabs/-->
-                            <li class="nav-item">
-                            <a class="nav-link bg-transparent text-light" href="index.html">Spendenregistrierung</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link bg-transparent text-light" href="FragenundAntworten.html">Fragen & Antworten</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link bg-transparent text-light" href="News.html">News zu den Krisengebieten</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link bg-transparent text-light" href="Ueberuns.html">Über die Organisation</a>
-                            </li>
-                        </ul>
-                    </div>
-               </div>
-            </div>
-        </header>
+       <header class="bg-secondary border-bottom border-light text-light"><!--https://getbootstrap.com/docs/5.3/utilities/-->
+        <div class="container-fluid text-center"><div class="row justify-content-center"><div class="col-xs-12 col-md-6 p-4"><img src="logo.png"></div></div></div><!--  s.25 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+        <div class="container-fluid text-center"><!--https://getbootstrap.com/docs/5.3/layout/containers/-->
+           <div class="row">
+                <div class="col">
+                    <ul class="nav nav-tabs border border-0"><!--https://getbootstrap.com/docs/5.3/components/navs-tabs/-->
+                        <li class="nav-item">
+                        <a class="nav-link active bg-transparent text-light" href="#">Spendenregistrierung</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link bg-transparent text-light" href="FragenundAntworten.html">Fragen & Antworten</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link bg-transparent text-light" href="News.html">News zu den Krisengebieten</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link bg-transparent text-light" href="Ueberuns.html">Über die Organisation</a>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+        </div>
+       </header>
        <main class="bg-info text-dark" style="--bs-bg-opacity: .2;">
             <div class="container-md">
                 <div class="row align-items-center">
-                    <div class="col-12 pt-5">
+                    <div class="col-12 p-5">
                         <section>
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="back()">Zurück</button>
+                            <p><h1><span class="badge bg-success text-light">Neu!</span> Sie können Ihre Kleiderspende nun registrieren!</h1></p><!--  Für <p>:s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                            <p>Bitte wählen Sie dazu aus, ob Sie die gespendeten Altkleider an unserer Geschäftsstelle abgeben,                 <!--Für Badge: https://getbootstrap.com/docs/5.3/components/badge/-->
+                                oder diese von unserem Sammelfahrzeug bequem abholen lassen möchten.
+                            <p><b>Wichtige Informationen zum Vorgehen:</b><br>
+                                Bitte wählen Sie unten die gewünschte Option aus und klicken Sie auf "Weiter". Füllen Sie das erscheinende Formular vollständig aus und vergewissern Sie sich, 
+                                dass ihre Angaben korrekt sind. Beachten Sie bei der Terminauswahl, dass der früheste Tag immer der erste Tag der nächsten Woche ist und, dass 
+                                Spenden nur von 09 Uhr bis 18 Uhr jeweils zu vollen Stunden angenommen werden. Bei der Abholung ist die Uhrzeit ein Richtwert, bitte seien 
+                                Sie etwa 30 Minuten vor und nach der angegebenen Zeit an der eingetragenen Adresse anzutreffen.</p>
+                            </p>
+                            <div class="col-12 pt-5">
+                                <p><h2>Ihre Vorteile auf einen Blick:</h2></p>
+                                <p><ul><!--  s.13 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                                <li>Flexible Wahl zwischen Abholung oder Übergabe.</li>
+                                <li>Flexible Wahl des Krisengebietes, an die Sie die Kleider spenden möchten.</li>
+                                <li>Pratische Angabe der Kleidungsstücke, die Sie spenden möchten - so wird ein reibungsloser Ablauf deutlich vereinfacht.</li>
+                                </ul></p>
+                            </div>
                         </section>
                     </div>
-                    <div class="col-12 pt-5">
+                    <div class="col-12 ps-5 pe-5 pb-5">
+                        <section>
+                            <p><h3>Bitte wählen Sie die gewünschte Option:</h3></p>
+                            <p><div class="form-check"><!--https://getbootstrap.com/docs/5.3/forms/checks-radios/-->
+                                <input class="form-check-input" type="radio" name="Auswahl" id="abgabe" value="0">
+                                <label class="form-check-label" for="abgabe">Übergabe an der Geschäftsstelle</label>
+                            </div></p>
+                            <p><div class="form-check">
+                                <input class="form-check-input" type="radio" name="Auswahl" id="abholung" value="option2">
+                                <label class="form-check-label" for="abholung">Abholung</label> 
+                            </div></p>
+                            <p><button class="btn btn-secondary btn-lg" onclick="weitertest()">Weiter</button></p><!--https://getbootstrap.com/docs/5.3/components/buttons/-->
+                        </section>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="d-none col-12" name="Daten"><!--https://getbootstrap.com/docs/5.3/utilities/visibility/-->
                         <section>
                             <form>
                                 <div class="col-xs-12 col-md-6">
                                 <p><h4>Bitte wählen Sie den Tag der Abholung:</h4><br>
-                                    <select class="form-select" aria-label="Default select example" id="tag"><!--https://getbootstrap.com/docs/5.3/forms/select/-->
-                                        <option value="0" selected>Bitte wählen Sie einen Tag</option>
+                                    <select class="form-select" aria-label="Default select example" name="Tag"><!--https://getbootstrap.com/docs/5.3/forms/select/-->
+                                        <option selected>Bitte wählen Sie einen Tag</option>
                                         <option value="1">Nächsten Montag</option>
                                         <option value="2">Nächsten Dienstag</option>
                                         <option value="3">Nächsten Mittwoch</option>
@@ -57,8 +89,8 @@
                                 </p></div>
                                 <div class="col-xs-12 col-md-6">
                                 <p><h4>Bitte wählen Sie die Uhrzeit der Abholung:</h4><br>
-                                    <select class="form-select" aria-label="Default select example" id="zeit">
-                                        <option value="0" selected>Bitte wählen Sie eine Uhrzeit</option>
+                                    <select class="form-select" aria-label="Default select example" name="Uhrzeit">
+                                        <option selected>Bitte wählen Sie eine Uhrzeit</option>
                                         <option value="1">09 Uhr</option>
                                         <option value="2">10 Uhr</option>
                                         <option value="3">11 Uhr</option>
@@ -74,7 +106,7 @@
                             </form>
                         </section>
                     </div>
-                    <div class="col-12 pt-5">
+                    <div class="d-none col-12 pt-5" name="Daten">
                         <section>
                             <table><!--  s.15 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
                                 <thead>
@@ -96,7 +128,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="plz" class="form-label">Postleitzahl:</label>
-                                                    <input type="number" class="form-control" id="plz" placeholder="PLZ">
+                                                    <input type="text" class="form-control" id="plz"  pattern="[0-9] {5}" placeholder="PLZ">
                                                 </div>
                                             </form>
                                         </td>
@@ -105,7 +137,7 @@
                             </table>
                         </section>
                     </div>
-                    <div class="col-12 pt-5">
+                    <div class="d-none col-12 pt-5" name="Daten">
                         <section>
                             <p><h4>Wählen Sie das gewünschte Gebiet bzw. die gewünschten Gebiete:</h4></p>
                             <ul class="list-group"><!--https://getbootstrap.com/docs/5.3/components/list-group/-->
@@ -143,7 +175,7 @@
                             </ul>
                         </section>
                     </div>
-                    <div class="col-12 pt-5 pb-5">
+                    <div class="d-none col-12 pt-5 pb-5" name="Daten">
                         <section>
                             <p><h4>Wählen Sie die Art der gespendeten Kleidung:</h4>
                                 <ul class="list-group">
@@ -187,17 +219,16 @@
                             </p>
                         </section>
                     </div>
-                    <div class="col-12 pb-5">
+                    <div class="d-none col-12 pb-5" name="Daten">
                         <section>
-                            <div class="d-none pb-2 text-danger" id="fehler"><h4><b>Fehler:</b> Überprüfen Sie Ihre Eingabe!</h4></div><!--https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements-->
-                            <div class="d-none pb-2 text-danger" id="fehler1"><h4><b>Fehler:</b> Sie wohnen zu weit entfernt! Bitte wählen Sie "Übergabe an der Geschäftsstelle".</h4></div>
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="spendenext()">Spenden</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Spenden</button>
                         </section>
                     </div>
                 </div>
-            </div>   
-       </main>
-        <footer class="bg-secondary text-dark border-top border-light"><!--https://getbootstrap.com/docs/5.3/helpers/position/-->
+            </div>
+
+        </main>
+       <footer class="bg-secondary text-dark border-top border-light"><!--https://getbootstrap.com/docs/5.3/helpers/position/-->
             <div class="container-fluid text-center">
                 <nav>
                     <div class="row">
@@ -206,7 +237,7 @@
                     </div>
                 </nav>
             </div>
-        </footer>
-        <script src="script.js"></script>
+       </footer>
     </body>
+    <script src="script.js"></script>
 </html>
