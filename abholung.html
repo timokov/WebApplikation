@@ -45,30 +45,26 @@
                         <section>
                             <form>
                                 <div class="col-xs-12 col-md-6">
-                                <p><h4>Bitte wählen Sie den Tag der Abholung:</h4><br>
-                                    <select class="form-select" aria-label="Default select example" id="tag"><!--https://getbootstrap.com/docs/5.3/forms/select/-->
-                                        <option value="0" selected>Bitte wählen Sie einen Tag</option>
-                                        <option value="1">Nächsten Montag</option>
-                                        <option value="2">Nächsten Dienstag</option>
-                                        <option value="3">Nächsten Mittwoch</option>
-                                        <option value="4">Nächsten Donnerstag</option>
-                                        <option value="5">Nächsten Freitag</option>
-                                    </select>
+                                <p><h4>Bitte wählen Sie das gewünschte Gebiet:</h4><br>
+                                    <select class="form-select" aria-label="Default select example" id="gebiet"><!--https://getbootstrap.com/docs/5.3/forms/select/-->
+                                        <option value="0" name="gebietwahl" selected>Bitte wählen Sie ein Gebiet</option>
+                                        <option value="1" name="gebietwahl">Bhutan</option>
+                                        <option value="2" name="gebietwahl">Demokratische Republik Kongo</option>
+                                        <option value="3" name="gebietwahl">Gambia</option>
+                                        <option value="4" name="gebietwahl">Niger</option>
+                                        <option value="5" name="gebietwahl">Togo</option>
+                                    </select><!--Liste aus: https://unric.org/de/wp-content/uploads/sites/4/2017/02/dpi2190b.pdf -->
                                 </p></div>
                                 <div class="col-xs-12 col-md-6">
-                                <p><h4>Bitte wählen Sie die Uhrzeit der Abholung:</h4><br>
-                                    <select class="form-select" aria-label="Default select example" id="zeit">
-                                        <option value="0" selected>Bitte wählen Sie eine Uhrzeit</option>
-                                        <option value="1">09 Uhr</option>
-                                        <option value="2">10 Uhr</option>
-                                        <option value="3">11 Uhr</option>
-                                        <option value="4">12 Uhr</option>
-                                        <option value="5">13 Uhr</option>
-                                        <option value="6">14 Uhr</option>
-                                        <option value="7">15 Uhr</option>
-                                        <option value="8">16 Uhr</option>
-                                        <option value="9">17 Uhr</option>
-                                        <option value="10">18 Uhr</option>
+                                <p><h4>Bitte wählen Sie die Art der gespendeten Kleidung:</h4><br>
+                                    <select class="form-select" aria-label="Default select example" id="kleidung">
+                                        <option value="0" name="kleidungwahl" selected>Bitte wählen Sie eine Kleidungsart</option>
+                                        <option value="1" name="kleidungwahl">Taschen, Rucksäcke</option>
+                                        <option value="1" name="kleidungwahl">Kopfbedeckungen</option>
+                                        <option value="2" name="kleidungwahl">Pullover/Sweatshirts</option>
+                                        <option value="3" name="kleidungwahl">T-Shirts</option>
+                                        <option value="4" name="kleidungwahl">Hosen</option>
+                                        <option value="5" name="kleidungwahl">Schuhe</option>
                                     </select>
                                 </p></div>
                             </form>
@@ -104,93 +100,11 @@
                                 </tbody>
                             </table>
                         </section>
-                    </div>
-                    <div class="col-12 pt-5">
-                        <section>
-                            <p><h4>Wählen Sie das gewünschte Gebiet bzw. die gewünschten Gebiete:</h4></p>
-                            <ul class="list-group"><!--https://getbootstrap.com/docs/5.3/components/list-group/-->
-                                <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check"><!--https://getbootstrap.com/docs/5.3/forms/checks-radios/-->
-                                    <input class="form-check-input" type="checkbox" id="Bhutan" value="g1">
-                                    <label class="form-check-label" for="Bhutan">
-                                    Bhutan
-                                    </label>
-                                </div></li>
-                                <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="Kongo" value="g2">
-                                    <label class="form-check-label" for="Kongo">
-                                    Demokratische Republik Kongo
-                                    </label>
-                                </div></li>
-                                <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="Gambia" value="g3">
-                                    <label class="form-check-label" for="Gambia">
-                                    Gambia
-                                    </label>
-                                </div></li>
-                                <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="Niger" value="g4">
-                                    <label class="form-check-label" for="Niger">
-                                    Gambia
-                                    </label>
-                                </div></li>
-                                <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="Togo" value="g5">
-                                    <label class="form-check-label" for="Togo">
-                                    Togo
-                                    </label>
-                                </div></li>
-                                <!--Liste aus: https://unric.org/de/wp-content/uploads/sites/4/2017/02/dpi2190b.pdf -->
-                            </ul>
-                        </section>
-                    </div>
+                    </div> 
                     <div class="col-12 pt-5 pb-5">
                         <section>
-                            <p><h4>Wählen Sie die Art der gespendeten Kleidung:</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Taschen" value="k1">
-                                        <label class="form-check-label" for="Taschen">
-                                        Taschen, Rucksäcke
-                                        </label>
-                                    </div></li>
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Kopfbedeckungen" value="k2">
-                                        <label class="form-check-label" for="Kopfbedeckungen">
-                                        Kopfbedeckungen
-                                        </label>
-                                    </div></li>
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Pullover" value="k3">
-                                        <label class="form-check-label" for="Pullover">
-                                            Pullover/Sweatshirts
-                                        </label>
-                                    </div></li>
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="T-Shirts" value="k4">
-                                        <label class="form-check-label" for="T-Shirts">
-                                        T-Shirts
-                                        </label>
-                                    </div></li>
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Hosen" value="k5">
-                                        <label class="form-check-label" for="Hosen">
-                                        Hosen
-                                        </label>
-                                    </div></li>
-                                    <li class="list-group-item bg-secondary" style="--bs-bg-opacity: .1;"><div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Schuhe" value="k6">
-                                        <label class="form-check-label" for="Schuhe">
-                                        Schuhe
-                                        </label>
-                                    </div></li>
-                                </ul>
-                            </p>
-                        </section>
-                    </div>
-                    <div class="col-12 pb-5">
-                        <section>
                             <div class="d-none pb-2 text-danger" id="fehler"><h4><b>Fehler:</b> Überprüfen Sie Ihre Eingabe!</h4></div><!--https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements-->
-                            <div class="d-none pb-2 text-danger" id="fehler1"><h4><b>Fehler:</b> Sie wohnen zu weit entfernt! Bitte wählen Sie "Übergabe an der Geschäftsstelle".</h4></div>
+                            <div class="d-none pb-2 text-danger" id="fehler1"><h4><b>Fehler:</b> Sie wohnen zu weit entfernt! Bitte übergeben Sie Ihre Spende persönlich.</h4></div>
                             <button type="button" class="btn btn-secondary btn-lg" onclick="spendenext()">Spenden</button>
                         </section>
                     </div>
