@@ -66,14 +66,89 @@
                         <section>
                             <p><h3>Bitte wählen Sie die gewünschte Option:</h3></p>
                             <p><div class="form-check"><!--https://getbootstrap.com/docs/5.3/forms/checks-radios/-->
-                                <input class="form-check-input" type="radio" name="Auswahl" id="abgabe" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="Auswahl" id="abgabe" value="option1">
                                 <label class="form-check-label" for="abgabe">Übergabe an der Geschäftsstelle</label>
                             </div></p>
                             <p><div class="form-check">
                                 <input class="form-check-input" type="radio" name="Auswahl" id="abholung" value="option2">
                                 <label class="form-check-label" for="abholung">Abholung</label> 
                             </div></p>
-                            <p><button type="button" class="btn btn-secondary btn-lg" onclick="weiter()">Weiter</button></p><!--https://getbootstrap.com/docs/5.3/components/buttons/-->
+                            <div class="d-none pb-2 text-danger" id="fehlerweiter"><h4><b>Fehler:</b> Wählen Sie eine Option!</h4></div>
+                            <p><button type="button" class="btn btn-secondary btn-lg" id="weiterknopf" onclick="weiter()">Weiter</button></p><!--https://getbootstrap.com/docs/5.3/components/buttons/-->
+                            <div class="d-none" id="wrknopf"><button type="button" class="btn btn-secondary"  onclick="widerruf()">Auswahl widerrufen</button></div>
+                        </section>
+                    </div>
+                    <div class="d-none col-12 pb-5 ps-5 pe-5" id="wahlgebietkleidung">
+                        <section>
+                            <form>
+                                <div class="col-xs-12 col-md-6">
+                                <p><h4>Bitte wählen Sie das gewünschte Gebiet:</h4><br>
+                                    <select class="form-select" aria-label="Default select example" id="gebiet"><!--https://getbootstrap.com/docs/5.3/forms/select/-->
+                                        <option value="0" id="default" name="gebietwahl" selected>Bitte wählen Sie ein Gebiet</option>
+                                        <option value="1" name="gebietwahl">Bhutan</option>
+                                        <option value="2" name="gebietwahl">Demokratische Republik Kongo</option>
+                                        <option value="3" name="gebietwahl">Gambia</option>
+                                        <option value="4" name="gebietwahl">Niger</option>
+                                        <option value="5" name="gebietwahl">Togo</option>
+                                    </select><!--Liste aus: https://unric.org/de/wp-content/uploads/sites/4/2017/02/dpi2190b.pdf -->
+                                </p></div>
+                                <div class="col-xs-12 col-md-6">
+                                <p><h4>Bitte wählen Sie die Art der gespendeten Kleidung:</h4><br>
+                                    <select class="form-select" aria-label="Default select example" id="kleidung">
+                                        <option value="0" id="default1" name="kleidungwahl" selected>Bitte wählen Sie eine Kleidungsart</option>
+                                        <option value="1" name="kleidungwahl">Taschen, Rucksäcke</option>
+                                        <option value="1" name="kleidungwahl">Kopfbedeckungen</option>
+                                        <option value="2" name="kleidungwahl">Pullover/Sweatshirts</option>
+                                        <option value="3" name="kleidungwahl">T-Shirts</option>
+                                        <option value="4" name="kleidungwahl">Hosen</option>
+                                        <option value="5" name="kleidungwahl">Schuhe</option>
+                                    </select>
+                                </p></div>
+                            </form>
+                        </section>    
+                    </div>
+                    <div class="d-none col-12 pb-5 ps-5 pe-5" id="adresseingabe">
+                        <section>
+                            <table><!--  s.15 Bühler, P., Sinner, D. & Schlaich, P. (2017). HTML5 und CSS3. Semantik - Design – Responsive Layouts. SpringerExternes Tool -->
+                                <thead>
+                                    <tr><th><h4>Adressdaten:</h4></th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                            <div class="mb-3">
+                                                <label for="straßeundnr" class="form-label">Anschrift:</label><!--https://getbootstrap.com/docs/5.3/forms/form-control/-->
+                                                <input type="text" class="form-control" id="straßeundnr" placeholder="Straße und Hausnummer">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td>
+                                            <form class="row g-3"><!--https://getbootstrap.com/docs/5.3/forms/layout/-->
+                                                <div class="col-md-8">
+                                                    <label for="ort" class="form-label">Ort:</label>
+                                                    <input type="text" class="form-control" id="ort" placeholder="Stadt/Gemeinde/Ort">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="plz" class="form-label">Postleitzahl:</label>
+                                                    <input type="number" class="form-control" id="plz" placeholder="PLZ">
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div> 
+                    <div class="d-none col-12 p-5 pt-0" id="spendenknopfabgabe">
+                        <section>
+                            <div class="d-none pb-2 text-danger" id="fehler3"><h4><b>Fehler:</b> Überprüfen Sie Ihre Eingabe!</h4></div><!--https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements-->
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="spenden()">Spenden</button>
+                        </section>
+                    </div>
+                    <div class="d-none col-12 p-5 pt-0" id="spendenknopfabholung">
+                        <section>
+                            <div class="d-none pb-2 text-danger" id="fehler"><h4><b>Fehler:</b> Überprüfen Sie Ihre Eingabe!</h4></div><!--https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements-->
+                            <div class="d-none pb-2 text-danger" id="fehler1"><h4><b>Fehler:</b> Sie wohnen zu weit entfernt! Bitte übergeben Sie Ihre Spende persönlich.</h4></div>
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="spendenext()">Spenden</button>
                         </section>
                     </div>
                 </div>
