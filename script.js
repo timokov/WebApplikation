@@ -46,7 +46,8 @@ function spenden(){
                 }
                 let datum = new Date();
                 window.sessionStorage.setItem("datum", datum.toLocaleString('de-DE'));
-                let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), sessionStorage.getItem("datum"), "Musterstraße 77", "Berlin", "10115");
+                let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), sessionStorage.getItem("datum"), 
+                "Musterstraße 77", "Berlin", "10115");
                 let regjson = JSON.stringify(reg);
         } else {
                 document.getElementById('fehler').classList.remove('d-none');
