@@ -1,3 +1,21 @@
+class Registrierung{
+    gebiet = null;
+    kleidung = null;
+    zeit = null;
+    straßeundnr = null;
+    ort = null;
+    plz = null;
+
+    constructor(g, k, z, s, o, p){
+        this.gebiet = g;
+        this.kleidung = k;
+        this.zeit = z;
+        this.straßeundnr = s;
+        this.ort = o;
+        this.plz = p;
+    }
+}
+
 function weiter(){
     if(document.getElementsByName('Auswahl')[0].checked){
         document.location.href = "abgabe.html";
@@ -26,8 +44,11 @@ function spenden(){
                         window.sessionStorage.setItem("kleidung", e.innerText);
                     } else {}
                 }
-                var datum = new Date();
+                let datum = new Date();
                 window.sessionStorage.setItem("datum", datum.toLocaleString('de-DE'));
+                let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), sessionStorage.getItem("datum"), 
+                "Abgabe", "Abgabe", "Abgabe");
+                let regjson = JSON.stringify(reg);
         } else {
                 document.getElementById('fehler').classList.remove('d-none');
         }
@@ -58,8 +79,11 @@ function spendenext(){
                             window.sessionStorage.setItem("kleidung", e.innerText);
                         } else {}
                     }
-                    var datum = new Date();
+                    let datum = new Date();
                     window.sessionStorage.setItem("datum", datum.toLocaleString('de-DE'));
+                    let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), 
+                    sessionStorage.getItem("datum"), sessionStorage.getItem("anschrift"), sessionStorage.getItem("ort"), sessionStorage.getItem("plz"));
+                    let regjson = JSON.stringify(reg);
                 } else {
                     document.getElementById('fehler1').classList.remove('d-none');
                 } 
