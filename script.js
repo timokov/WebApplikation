@@ -6,14 +6,6 @@ class Registrierung{
     ort = null;
     plz = null;
 
-    constructor(g, k, z){
-        this.gebiet = g;
-        this.kleidung = k;
-        this.zeit = z;
-        this.straßeundnr = "Musterstraße 77";
-        this.ort = "Berlin";
-        this.plz = "10115";
-    }
     constructor(g, k, z, s, o, p){
         this.gebiet = g;
         this.kleidung = k;
@@ -54,7 +46,7 @@ function spenden(){
                 }
                 let datum = new Date();
                 window.sessionStorage.setItem("datum", datum.toLocaleString('de-DE'));
-                let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), sessionStorage.getItem("datum"));
+                let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), sessionStorage.getItem("datum"), "Musterstraße 77", "Berlin", "10115");
                 let regjson = JSON.stringify(reg);
         } else {
                 document.getElementById('fehler').classList.remove('d-none');
