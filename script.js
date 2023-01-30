@@ -42,7 +42,7 @@ function weiterkurz(){
 function widerruf(){
     document.getElementById('abgabe').removeAttribute("disabled");
     document.getElementById('abholung').removeAttribute("disabled");
-    document.getElementById('abgabe').removeAttribute("checked");//https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute
+    document.getElementById('abgabe').removeAttribute("checked");
     document.getElementById('abholung').removeAttribute("checked");
     document.getElementById('weiterknopf').classList.remove('d-none');
     document.getElementById('wrknopf').classList.add('d-none');
@@ -85,7 +85,8 @@ function spenden(){
                 let datum = new Date();
                 window.sessionStorage.setItem("datum", datum.toLocaleString('de-DE'));
                 let reg = new Registrierung(sessionStorage.getItem("gebiet"), sessionStorage.getItem("kleidung"), 
-                sessionStorage.getItem("datum"), sessionStorage.getItem("anschrift"), sessionStorage.getItem("ort"), sessionStorage.getItem("plz"));
+                sessionStorage.getItem("datum"), sessionStorage.getItem("anschrift"), 
+                sessionStorage.getItem("ort"), sessionStorage.getItem("plz"));
                 let regjson = JSON.stringify(reg);
         } else {
                 document.getElementById('fehler3').classList.remove('d-none');
